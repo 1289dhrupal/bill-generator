@@ -39,7 +39,7 @@ function bg_parse_csv()
 
         $meta = array(
             'print' => array('DATE' => 'print', 'BILL' => 'print', 'ITEM' => 'print', 'MAKE' => 'print', 'QTY' => 'print', 'RATE' => 'print', 'TOTAL' => 'print', 'PARTY' => 'print', 'EX RATE' => 'print', 'EX TOTAL' => 'print'),
-            'align' => array('DATE' => 'center', 'PARTY NAME' => 'start', 'QTY' => 'end', 'RATE' => 'end', 'TOTAL' => 'end', 'PARTY' => 'end', 'EX RATE' => 'end', 'EX TOTAL' => 'end', 'REMARKS', 'BROK.TIME', 'OTHER NOTI.', 'PAY DATE'),
+            'align' => array('DATE' => 'center', 'PARTY NAME' => 'start', 'QTY' => 'end', 'RATE' => 'end', 'TOTAL' => 'end', 'PARTY' => 'start', 'EX RATE' => 'end', 'EX TOTAL' => 'end', 'REMARKS', 'BROK.TIME', 'OTHER NOTI.', 'PAY DATE'),
         );
         return array('csv_header' => $header, 'csv_data' => $data, 'csv_meta' => $meta);
     }
