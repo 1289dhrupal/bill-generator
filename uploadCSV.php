@@ -6,7 +6,7 @@ include_once 'config.php';
 
 if (isset($_FILES["fileCSV"])) {
     $from_path = $_FILES["fileCSV"]["tmp_name"];
-    $to_path =  BASE_DIR . "/assets/uploads/data.csv";
+    $to_path =  BASE_DIR . '/assets/uploads/' . UPLOAD_FILE_NAME;
     if ($_FILES["fileCSV"]["error"] > 0) {
         $error = "Return Code: {$_FILES["fileCSV"]["error"]}";
     } elseif (!move_uploaded_file($from_path, $to_path)) {
