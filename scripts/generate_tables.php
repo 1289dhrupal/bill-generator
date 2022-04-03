@@ -22,7 +22,7 @@ function bg_get_table($data, $csv_header, $csv_meta)
                     <tr>
                         <th>SR.</th>
                         <?php foreach ($csv_header as $key) { ?>
-                            <th class="d-<?php echo $csv_meta['print'][$key] ?? 'print-none' ?> text-center"><?php echo $key ?></th>
+                            <th class="d-<?php echo $csv_meta['print'][$key] ?? 'print-none' ?> text-<?php echo $csv_meta['align'][$key] ?? 'start' ?>"><?php echo $key ?></th>
                         <?php } ?>
                     </tr>
                 </thead>
