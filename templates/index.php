@@ -93,7 +93,7 @@
                         <svg class="bi me-2" width="16" height="16">
                             <use xlink:href="#speedometer2" />
                         </svg>
-                        Dashboard
+                        Detailed List
                     </a>
                 </li>
                 <li>
@@ -104,39 +104,8 @@
                         Orders
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="nav-link text-white">
-                        <svg class="bi me-2" width="16" height="16">
-                            <use xlink:href="#grid" />
-                        </svg>
-                        Products
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link text-white">
-                        <svg class="bi me-2" width="16" height="16">
-                            <use xlink:href="#people-circle" />
-                        </svg>
-                        Customers
-                    </a>
-                </li>
             </ul>
             <hr>
-            <div class="dropdown">
-                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                    <strong>mdo</strong>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                </ul>
-            </div>
         </div>
 
         <div class="b-example-divider"></div>
@@ -163,7 +132,7 @@
                         <svg class="bi me-2" width="16" height="16">
                             <use xlink:href="#speedometer2" />
                         </svg>
-                        Dashboard
+                        Detailed List
                     </a>
                 </li>
                 <li>
@@ -174,39 +143,8 @@
                         Orders
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16">
-                            <use xlink:href="#grid" />
-                        </svg>
-                        Products
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16">
-                            <use xlink:href="#people-circle" />
-                        </svg>
-                        Customers
-                    </a>
-                </li>
             </ul>
             <hr>
-            <div class="dropdown">
-                <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                    <strong>mdo</strong>
-                </a>
-                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                </ul>
-            </div>
         </div>
 
         <div class="b-example-divider"></div>
@@ -227,8 +165,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link py-3 border-bottom" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right">
-                        <svg class="bi" width="24" height="24" role="img" aria-label="Dashboard">
+                    <a href="#" class="nav-link py-3 border-bottom" title="Detailed List" data-bs-toggle="tooltip" data-bs-placement="right">
+                        <svg class="bi" width="24" height="24" role="img" aria-label="Detailed List">
                             <use xlink:href="#speedometer2" />
                         </svg>
                     </a>
@@ -240,35 +178,7 @@
                         </svg>
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="nav-link py-3 border-bottom" title="Products" data-bs-toggle="tooltip" data-bs-placement="right">
-                        <svg class="bi" width="24" height="24" role="img" aria-label="Products">
-                            <use xlink:href="#grid" />
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link py-3 border-bottom" title="Customers" data-bs-toggle="tooltip" data-bs-placement="right">
-                        <svg class="bi" width="24" height="24" role="img" aria-label="Customers">
-                            <use xlink:href="#people-circle" />
-                        </svg>
-                    </a>
-                </li>
             </ul>
-            <div class="dropdown border-top">
-                <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="24" height="24" class="rounded-circle">
-                </a>
-                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                </ul>
-            </div>
         </div>
 
         <div class="b-example-divider"></div>
@@ -294,10 +204,10 @@
                     </div>
                 </li>
                 <li class="mb-1">
-                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                        Dashboard
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#detailed-list-collapse" aria-expanded="false">
+                        Detailed List
                     </button>
-                    <div class="collapse" id="dashboard-collapse">
+                    <div class="collapse" id="detailed-list-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             <li><a href="#" class="link-dark rounded">Overview</a></li>
                             <li><a href="#" class="link-dark rounded">Weekly</a></li>

@@ -4,7 +4,7 @@ function bg_get_table($data, $csv_header, $csv_meta)
     foreach ($data as $party_name => $entries) { ?>
         <div class="table-responsive">
             <table class="table table-striped">
-                <thead class="table-dark text-white">
+                <thead class="bg-secondary text-dark">
                     <tr>
                         <td colspan="16">
                             <div class="float-start display-4"><?php echo $party_name ?></div>
@@ -36,7 +36,7 @@ function bg_get_table($data, $csv_header, $csv_meta)
                         </tr>
                     <?php } ?>
                 </tbody>
-                <tfoot class="table-dark text-white">
+                <tfoot class="bg-secondary text-dark">
                     <tr>
                         <th>SR</th>
                         <?php foreach ($csv_header as $key) { ?>
@@ -46,7 +46,7 @@ function bg_get_table($data, $csv_header, $csv_meta)
                 </tfoot>
             </table>
         </div>
-        <div class="card text-white bg-dark">
+        <div class="card text-dark bg-secondary">
             <div class="card-header">
                 SUMMARY
             </div>

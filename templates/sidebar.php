@@ -81,12 +81,22 @@
                 </a>
             </li>
             <li>
-                <a href="<?php echo BASE_URL . "/dashboard.php" ?>" class="nav-link <?php echo $title == "Dashboard" ? "active" : "text-white" ?> text-center text-md-start">
+                <a href="<?php echo BASE_URL . "/detailed_list.php" ?>" class="nav-link <?php echo $title == "Detailed List" ? "active" : "text-white" ?> text-center text-md-start">
                     <svg class="bi me-2" width="16" height="16">
                         <use xlink:href="#speedometer2"></use>
                     </svg>
                     <span class="d-md-inline d-none">
-                        Dashboard
+                        Detailed List
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo BASE_URL . "/summary.php" ?>" class="nav-link <?php echo $title == "Summary" ? "active" : "text-white" ?> text-center text-md-start">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#speedometer2"></use>
+                    </svg>
+                    <span class="d-md-inline d-none">
+                        Summary
                     </span>
                 </a>
             </li>
@@ -100,45 +110,7 @@
                     </span>
                 </a>
             </li>
-            <li>
-                <a href="<?php echo BASE_URL . "/products.php" ?>" class="nav-link <?php echo $title == "Products" ? "active" : "text-white" ?> text-center text-md-start">
-                    <svg class="bi me-2" width="16" height="16">
-                        <use xlink:href="#grid"></use>
-                    </svg>
-                    <span class="d-md-inline d-none">
-                        Products
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="<?php echo BASE_URL . "/customers.php" ?>" class="nav-link <?php echo $title == "Customers" ? "active" : "text-white" ?> text-center text-md-start">
-                    <svg class="bi me-2" width="16" height="16">
-                        <use xlink:href="#people-circle"></use>
-                    </svg>
-                    <span class="d-md-inline d-none">
-                        Customers
-                    </span>
-                </a>
-            </li>
         </ul>
         <hr class="text-light">
-        <div class="dropdown">
-            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                <span class="d-md-inline d-none">
-                    <strong>mdo</strong>
-                </span>
-
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                <li><a class="dropdown-item" href="#">New project...</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
-            </ul>
-        </div>
     </div>
 </nav>

@@ -9,10 +9,10 @@ function bg_parse_csv()
         // gets the header
         $header = array();
         while (($row = fgetcsv($handle, 1000, ',')) !== FALSE) {
-            if (strtolower(trim($row[0])) == 'date') {
-                $header = array_map(fn ($row) => strtoupper(trim($row)), $row);
-                break;
-            }
+            $row[0] = 'DATE';
+            $header = array_map(fn ($row) => strtoupper(trim($row)), $row);
+            break;
+            print_r(trim($row[0]) == 'DATE' ? 'y' : 'n');
         }
 
         // gets the data
@@ -47,22 +47,24 @@ function bg_parse_csv()
     return $handle;
 }
 
-function get_filtered_data($data, $filter)
+function get_filtered_data($data, $filter = array())
 {
     $filtered_data = array();
     $top_header = array_keys($data[0]);
     foreach ($data as $entry) {
         $add = (
-            ($filter['party_name'] == 'ALL' or $filter['party_name'] === $entry['PARTY NAME']) and
-            (strtotime($filter['start_date']) === FALSE or strtotime($filter['start_date']) <= strtotime($entry['DATE'])) and
-            (strtotime($filter['end_date']) === FALSE or strtotime($filter['end_date']) >= strtotime($entry['DATE']))
+            (!isset($filter['party_name']) or $filter['party_name'] == 'ALL' or $filter['party_name'] === $entry['PARTY NAME']) and
+            (!isset($filter['start_date']) or strtotime($filter['start_date']) === FALSE or strtotime($filter['start_date']) <= strtotime($entry['DATE'])) and
+            (!isset($filter['end_date']) or strtotime($filter['end_date']) === FALSE or strtotime($filter['end_date']) >= strtotime($entry['DATE']))
         );
 
         if ($add) {
             for ($index = 11; $index < count($top_header); $index++) {
                 $extra_key = strtolower(preg_replace('/[^A-Za-z0-9]/', '_', $top_header[$index]));
                 if (
-                    ($filter[$extra_key] == 'ALL' or $filter[$extra_key] === $entry[$top_header[$index]])
+                    (array_key_exists($extra_key, $filter)
+                        and ($filter[$extra_key] == 'ALL'
+                            or $filter[$extra_key] === $entry[$top_header[$index]]))
                 ) {
                 } else {
                     $add = false;
