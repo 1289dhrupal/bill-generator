@@ -1,5 +1,5 @@
 <?php
-$title = "Print";
+$title = "Print Detailed List";
 include_once 'config.php';
 include_once BASE_DIR . '/scripts/process_data.php';
 include_once BASE_DIR . '/scripts/generate_tables.php';

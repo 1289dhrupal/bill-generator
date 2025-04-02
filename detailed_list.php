@@ -1,5 +1,5 @@
 <?php
-$title = "Dashboard";
+$title = "Detailed List";
 $message = $error = null;
 
 include_once 'config.php';
@@ -72,7 +72,7 @@ include_once BASE_DIR . '/templates/header.php'; ?>
 
 <link rel="stylesheet" href="./assets/css/datatables.min.css">
 <div class="table-responsive">
-    <table id="dashboard_table" class="table table-striped">
+    <table id="detailed_list_table" class="table table-striped">
         <thead class="table-dark text-white">
             <tr>
                 <th>SR.</th>
@@ -107,7 +107,7 @@ include_once BASE_DIR . '/templates/header.php'; ?>
 <script src="./assets/js/datatables.min.js"></script>
 <script>
     jQuery(document).ready(function() {
-        jQuery('#dashboard_table').DataTable();
+        jQuery('#detailed_list_table').DataTable();
     });
 </script>
 <?php include_once BASE_DIR . '/templates/footer.php' ?>
