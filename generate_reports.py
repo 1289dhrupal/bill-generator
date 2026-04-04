@@ -15,7 +15,8 @@ OUTPUT_DIR = 'output'
 SPLIT_BILLS_DIR = os.path.join(OUTPUT_DIR, 'split_bills')
 
 # Playwright PDF settings to mimic Chrome "75% scale, Normal Margins"
-PDF_MARGINS = {"top": "1in", "right": "1in", "bottom": "1in", "left": "1in"}
+PDF_MARGINS = {"top": "0.5in", "right": "0.5in",
+               "bottom": "0.5in", "left": "0.5in"}
 PDF_SCALE = 0.75
 
 # ==========================================
@@ -28,18 +29,19 @@ CSS_STYLES = """
     .bill-header { display: flex; justify-content: space-between; margin-bottom: 20px; }
     .bill-header .address { text-align: right; line-height: 1.4; }
     .pagebreak { page-break-after: always; }
+    tr, .summary-box { page-break-inside: avoid; break-inside: avoid; }
     table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 12px; }
-    th, td { border: 1px solid #dee2e6; padding: 8px; text-align: center; }
+    th, td { border: 2px solid #dee2e6; padding: 8px; text-align: center; }
     thead th, tfoot th { background-color: #f8f9fa; font-weight: bold; color: #000; }
     .table-light { background-color: #fbfbfb; }
-    .summary-box { width: 300px; float: right; border: 1px solid #6c757d; margin-top: 20px; }
-    .summary-header { background-color: #f8f9fa; padding: 8px 15px; border-bottom: 1px solid #6c757d; }
+    .summary-box { width: 300px; float: right; border: 2px solid #6c757d; margin-top: 20px; }
+    .summary-header { background-color: #f8f9fa; padding: 8px 15px; border-bottom: 2px solid #6c757d; }
     .summary-body { padding: 15px; }
     .summary-body div { display: flex; justify-content: space-between; margin-bottom: 5px; }
     .clear { clear: both; }
     .text-start { text-align: left; }
     .text-end { text-align: right; }
-    hr { border-top: 1px solid #ccc; margin: 10px 0; }
+    hr { border-top: 2px solid #ccc; margin: 10px 0; }
 </style>
 """
 
