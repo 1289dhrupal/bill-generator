@@ -10,7 +10,7 @@ function bg_parse_csv()
         $header = array();
         while (($row = fgetcsv($handle, 1000, ',')) !== FALSE) {
             $row[0] = 'DATE';
-            $header = array_map(fn ($row) => strtoupper(trim($row)), $row);
+            $header = array_map(fn($row) => strtoupper(trim($row)), $row);
             break;
             print_r(trim($row[0]) == 'DATE' ? 'y' : 'n');
         }
@@ -18,7 +18,7 @@ function bg_parse_csv()
         // gets the data
         while (($row = fgetcsv($handle, 1000, ',')) !== FALSE) {
             if (strtotime($row[0]) !== FALSE) {
-                $current_row = array_combine($header, array_map(fn ($row) => strtoupper(trim($row)), $row));
+                $current_row = array_combine($header, array_map(fn($row) => strtoupper(trim($row)), $row));
 
                 $date = explode('-', $current_row['DATE']);
 
@@ -35,8 +35,8 @@ function bg_parse_csv()
         }
         fclose($handle);
 
-        usort($data, fn ($a, $b) => $a['PARTY NAME'] <=> $b['PARTY NAME'] ?: strtotime($a['DATE']) <=> strtotime($b['DATE']));
-        usort($data, fn ($a, $b) => $a['PARTY NAME'] <=> $b['PARTY NAME'] ?: strtotime($a['DATE']) <=> strtotime($b['DATE']));
+        usort($data, fn($a, $b) => $a['PARTY NAME'] <=> $b['PARTY NAME'] ?: strtotime($a['DATE']) <=> strtotime($b['DATE']));
+        usort($data, fn($a, $b) => $a['PARTY NAME'] <=> $b['PARTY NAME'] ?: strtotime($a['DATE']) <=> strtotime($b['DATE']));
 
         $meta = array(
             'print' => array('DATE' => 'print', 'BILL' => 'print', 'ITEM' => 'print', 'MAKE' => 'print', 'QTY' => 'print', 'RATE' => 'print', 'TOTAL' => 'print', 'PARTY' => 'print', 'EX RATE' => 'print', 'EX TOTAL' => 'print'),
@@ -52,6 +52,7 @@ function get_filtered_data($data, $filter = array())
 {
     $filtered_data = array();
     $top_header = array_keys($data[0]);
+    $sum = 0;
     foreach ($data as $entry) {
         $add = (
             (!isset($filter['party_name']) or $filter['party_name'] == 'ALL' or $filter['party_name'] === $entry['PARTY NAME']) and
@@ -60,18 +61,18 @@ function get_filtered_data($data, $filter = array())
         );
 
         if ($add) {
-            for ($index = 11; $index < count($top_header); $index++) {
-                $extra_key = strtolower(preg_replace('/[^A-Za-z0-9]/', '_', $top_header[$index]));
-                if (
-                    (array_key_exists($extra_key, $filter)
-                        and ($filter[$extra_key] == 'ALL'
-                            or $filter[$extra_key] === $entry[$top_header[$index]]))
-                ) {
-                } else {
-                    $add = false;
-                    break;
-                }
-            }
+            // for ($index = 11; $index < count($top_header); $index++) {
+            //     $extra_key = strtolower(preg_replace('/[^A-Za-z0-9]/', '_', $top_header[$index]));
+            //     if (
+            //         (array_key_exists($extra_key, $filter)
+            //             and ($filter[$extra_key] == 'ALL'
+            //                 or $filter[$extra_key] === $entry[$top_header[$index]]))
+            //     ) {
+            //     } else {
+            //         $add = false;
+            //         break;
+            //     }
+            // }
         }
         if ($add) {
             if (isset($filtered_data[$entry['PARTY NAME']])) $filtered_data[$entry['PARTY NAME']][] = $entry;

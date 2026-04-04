@@ -14,8 +14,8 @@ if ($_SERVER['SERVER_NAME'] == 'bill-generator-pss.herokuapp.com') {
 } else {
     define("ENV", 'dev');
     error_reporting(E_ALL & ~E_NOTICE);
-    define('BASE_URL', 'http://localhost/bill-generator');
-    define('BASE_DIR', "$_SERVER[DOCUMENT_ROOT]/bill-generator");
+    define('BASE_URL', 'http://localhost/bill-generator/php');
+    define('BASE_DIR', "$_SERVER[DOCUMENT_ROOT]/bill-generator/php");
 }
 
 define('UPLOAD_FILE_NAME', 'processed.csv');
