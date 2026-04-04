@@ -105,7 +105,7 @@ DETAILED_TEMPLATE = CSS_STYLES + """
 """
 
 SUMMARY_TEMPLATE = CSS_STYLES + """
-<h2 style="text-align: center; margin-bottom: 20px;">Print Summary</h2>
+<h2 style="text-align: center; margin-bottom: 20px;">Summary</h2>
 <table>
     <thead>
         <tr>
